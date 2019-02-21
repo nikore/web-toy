@@ -19,7 +19,6 @@ func Env(w http.ResponseWriter, r *http.Request) {
 		"DIRENV_WATCHES":        true,
 		"GEMFURY_TOKEN":         true,
 		"GITHUB_API_TOKEN":      true,
-		"GOBA_SSH_ADMIN_KEY":    true,
 		"NEW_RELIC_LICENSE_KEY": true,
 		"ROLLBAR_CLIENT_TOKEN":  true,
 		"ROLLBAR_SERVER_TOKEN":  true,

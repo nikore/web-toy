@@ -29,6 +29,6 @@ func (h *HealthHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 		log.Print("Fuse time passed!  Serving 503 on /health")
 		http.Error(w, "503 fuse time exceeded", 503)
 	} else {
-		io.WriteString(w, "OK doc")
+		io.WriteString(w, "OK")
 	}
 }

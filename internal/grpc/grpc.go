@@ -21,6 +21,5 @@ func Serve(lis net.Listener) error {
 	s := grpc.NewServer()
 	pb.RegisterGreeterServer(s, &server{})
 	reflection.Register(s)
-	s.Serve(lis)
-	return nil
+	return s.Serve(lis)
 }
