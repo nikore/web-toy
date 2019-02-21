@@ -95,7 +95,7 @@ func main() {
 
 	m := cmux.New(listener)
 
-	grpcListener := m.Match(cmux.HTTP2HeaderField("content-type", "application/grpc"))
+	grpcListener := m.MatchWithWriters(cmux.HTTP2MatchHeaderFieldSendSettings("content-type", "application/grpc"))
 	httpListener := m.Match(cmux.HTTP1Fast())
 
 	go httpServe(httpListener)
